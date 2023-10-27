@@ -57,51 +57,20 @@
             <a
               href="https://10ax.online.tableau.com/#/site/kjmdev797388"
               target="_blank"
-              >{{ item.site_name }}</a
-            ></template
-          >
+              class="site-link"
+              >{{ item.site_name }}
+              <v-icon
+                icon="mdi-open-in-new"
+                size="16"
+                class="pl-2"
+                color="blue"
+              ></v-icon></a
+          ></template>
           <template #[`item.created_at`]="{ item }">
             {{ formattedTableDate(item.created_at) }}
           </template>
           <template v-slot:expanded-row="{ columns, item }">
             <td :colspan="columns.length" class="py-4">
-              <!-- <div class="d-flex justify-center align-center w-100">
-                <v-card style="width: 75%; max-width: 828px" elevation="15">
-                  <v-card-title style="background-color: #03a9f4">{{
-                    formatEventName(item.event_type)
-                  }}</v-card-title>
-                  <v-card-subtitle class="pt-2">
-                    <div class="d-flex justify-space-between">
-                      <span class="text-subtitle-2"
-                        >A new workbook has been created.</span
-                      >
-                      <span>{{ formattedDate(item.created_at) }}</span>
-                    </div>
-                  </v-card-subtitle>
-                  <v-card-text>
-                    <div class="text-h6 wb-link pb-2">
-                      <a :href="item.webpage_url" target="_blank">
-                        {{ item.resource_name }}
-                        <v-icon
-                          icon="mdi-open-in-new"
-                          size="16"
-                          color="#03A9F4"
-                        ></v-icon>
-                      </a>
-                    </div>
-                    <div>
-                      <span class="text-caption pr-2">Project Name:</span>
-                      {{ item.project_name }}
-                    </div>
-                    <div>
-                      <span class="text-caption pr-2">Owner:</span>
-                      <a :href="`mailto:${item.owner_email}`" target="_blank">
-                        {{ item.owner_name }}
-                      </a>
-                    </div>
-                  </v-card-text>
-                </v-card>
-              </div> -->
               <UserExpandCard :eventObj="item" v-if="item.resource == 'USER'" />
               <DatasourceExpandCard
                 :eventObj="item"
@@ -472,5 +441,10 @@ export default {
 
 .wb-link a:hover {
   text-decoration: underline;
+}
+
+.site-link {
+  text-decoration: none;
+  color: black;
 }
 </style>
