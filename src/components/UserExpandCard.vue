@@ -45,7 +45,7 @@
               target="_blank"
             >
               <v-btn
-                variant="flat"
+                variant="tonal"
                 color="blue-grey-darken-1"
                 density="comfortable"
                 >View Site
@@ -58,7 +58,7 @@
               target="_blank"
             >
               <v-btn
-                variant="flat"
+                variant="tonal"
                 color="blue-grey-darken-1"
                 density="comfortable"
                 >View Users

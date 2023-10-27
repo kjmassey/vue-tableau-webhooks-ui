@@ -38,7 +38,7 @@
               target="_blank"
             >
               <v-btn
-                variant="flat"
+                variant="tonal"
                 color="blue-grey-darken-1"
                 density="comfortable"
                 >View Site
@@ -57,7 +57,7 @@ export default {
   computed: {
     getSubtitleText() {
       switch (this.$props.eventObj.event_type) {
-        case "View Deleted":
+        case "ViewDeleted":
           return "The following view has been deleted:";
 
         default:

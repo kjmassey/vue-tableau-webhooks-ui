@@ -16,6 +16,7 @@
     <v-dialog
       v-model="showInfoDialog"
       style="max-width: 675px; min-width: 575px"
+      persistent
     >
       <v-card>
         <v-card-title class="d-flex">
@@ -38,20 +39,68 @@
         <v-card-text class="text-body-2">
           <div>
             This mock administrative portal was created to show how you can
-            leverage the power of Tableau and its APIs - alongside other web
-            technologies - to gain actionable insights into activities and
-            events that are occurring with your Tableau content/site(s).
+            leverage the power of webhooks from Tableau and its APIs - alongside
+            other web technologies - to gain actionable insights into activities
+            and events that are occurring with your Tableau content/site(s).
           </div>
           <div class="pt-4">
             Please feel free to borrow, steal, adapt and modify any of the
-            source code, which is available here.
+            source code, which is available
+            <a
+              href="https://github.com/kjmassey/vue-tableau-webhooks-ui"
+              target="_blank"
+              >here</a
+            >
+            (frontend) and
+            <a
+              href="https://github.com/kjmassey/django-tableau-webhooks"
+              target="_blank"
+              >here</a
+            >
+            (backend).
+          </div>
+
+          <div class="pt-4">
+            If you have questions about this example, my DataDev Day
+            presentation or just want to talk nerdy, please reach out:
+          </div>
+
+          <div class="pt-4">
+            <v-icon icon="mdi-twitter" color="#26a7de" class="mr-4"></v-icon>
+
+            <a href="https://twitter.com/UpInYourVizness" target="_blank"
+              >@UpInYourVizness</a
+            >
+          </div>
+          <div>
+            <v-icon icon="mdi-github" class="mr-4"></v-icon>
+
+            <a href="https://github.com/kjmassey" target="_blank">kjmassey</a>
+          </div>
+
+          <div>
+            <v-icon icon="mdi-slack" color="purple" class="mr-4"></v-icon>
+
+            <a
+              href="https://tableau-datadev.slack.com/team/U02TY283SEM"
+              target="_blank"
+              >Kyle Massey</a
+            >
+          </div>
+
+          <div>
+            <v-icon icon="mdi-web" color="green" class="mr-4"></v-icon>
+
+            <a href="https://kylejmassey.com" target="_blank"
+              >kylejmassey.com</a
+            >
           </div>
         </v-card-text>
         <v-card-actions>
           <div class="w-100">
             <div class="text-caption pb-2 px-4"><em>Tools used:</em></div>
             <div
-              class="d-flex justify-space-between align-center cursor-hover w-100 px-4 pb-4"
+              class="d-flex justify-space-between align-center cursor-hover w-100 px-6 pb-4"
             >
               <v-tooltip
                 text="Tableau/Tableau REST API/Tableau Webhooks"
@@ -150,7 +199,7 @@
 <script>
 export default {
   data: () => ({
-    showInfoDialog: true,
+    showInfoDialog: false,
   }),
   methods: {
     openURL(url) {
@@ -163,5 +212,9 @@ export default {
 <style>
 .cursor-hover {
   cursor: pointer;
+}
+
+a {
+  color: blue;
 }
 </style>

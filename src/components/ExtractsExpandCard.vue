@@ -88,7 +88,7 @@
             <v-btn
               variant="flat"
               density="comfortable"
-              color="red-darken-2"
+              color="red-lighten-2"
               class="px-2"
               @click="showDeleteDialog = true"
               ><v-icon
@@ -105,7 +105,7 @@
               target="_blank"
             >
               <v-btn
-                variant="flat"
+                variant="tonal"
                 color="blue-grey-darken-1"
                 density="comfortable"
                 >View Site
@@ -147,7 +147,7 @@
         <v-card-actions>
           <div class="d-flex justify-center w-100">
             <v-btn
-              color="red-darken-2"
+              color="red-lighten-2"
               variant="flat"
               @click="
                 isLoading = true;
@@ -263,11 +263,11 @@
       <v-card>
         <v-card-title class="tag-title text-white">
           <div class="d-flex w-100 justify-space-between">
-            <span>Confirm: Remove Extract Schedules</span>
+            <span>Confirm: Add Tag</span>
             <span
               ><v-icon
                 icon="mdi-close close-icon"
-                @click="showSchedsDialog = false"
+                @click="showTagDialog = false"
               ></v-icon
             ></span>
           </div>

@@ -9,9 +9,7 @@
         ]"
       >
         <div class="d-flex justify-space-between align-center">
-          <span>
-            {{ formatEventName($props.eventObj.event_type) }}
-          </span>
+          <span> {{ formatEventName($props.eventObj.event_type) }} </span>
           <span class="text-caption">{{
             formattedDate(this.$props.eventObj.created_at)
           }}</span>
@@ -76,13 +74,13 @@
             v-if="$props.eventObj.event_type == 'DatasourceCreated'"
           >
             <v-btn
-              variant="flat"
+              variant="outlined"
               density="comfortable"
-              color="red-darken-2"
+              color="red-lighten-2"
               @click="showDeleteDialog = true"
               ><v-icon
                 icon="mdi-delete-outline"
-                color="white"
+                color="red-lighten-2"
                 class="mr-2"
               ></v-icon
               >Delete</v-btn
@@ -94,7 +92,7 @@
               target="_blank"
             >
               <v-btn
-                variant="flat"
+                variant="tonal"
                 color="blue-grey-darken-1"
                 density="comfortable"
                 >View Site
@@ -110,7 +108,7 @@
       style="width: 50%; max-width: 550px"
     >
       <v-card>
-        <v-card-title class="delete-title text-white">
+        <v-card-title class="delete-title">
           <div class="d-flex w-100 justify-space-between">
             <span>Confirm: Delete Datasource</span>
             <span
@@ -136,7 +134,7 @@
         <v-card-actions>
           <div class="d-flex justify-center w-100">
             <v-btn
-              color="red-darken-2"
+              color="red-lighten-2"
               variant="flat"
               @click="
                 isLoading = true;
@@ -224,11 +222,11 @@ export default {
 
 <style>
 .red-background {
-  background-color: orangered;
+  background-color: #e57373 !important;
 }
 
 .blue-background {
-  background-color: #03a9f4;
+  background-color: #81d4fa !important;
 }
 
 .card-link {
@@ -241,7 +239,7 @@ export default {
 }
 
 .delete-title {
-  background-color: #d32f2f;
+  background-color: #e57373 !important;
 }
 
 .close-icon {

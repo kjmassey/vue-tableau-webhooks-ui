@@ -75,7 +75,7 @@
             <v-btn
               variant="flat"
               density="comfortable"
-              color="red-darken-2"
+              color="red-lighten-2"
               @click="showDeleteDialog = true"
               ><v-icon
                 icon="mdi-delete-outline"
@@ -91,7 +91,7 @@
               target="_blank"
             >
               <v-btn
-                variant="flat"
+                variant="tonal"
                 color="blue-grey-darken-1"
                 density="comfortable"
                 >View Site
@@ -133,7 +133,7 @@
         <v-card-actions>
           <div class="d-flex justify-center w-100">
             <v-btn
-              color="red-darken-2"
+              color="red-lighten-2"
               variant="flat"
               @click="
                 isLoading = true;
